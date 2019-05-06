@@ -1,0 +1,365 @@
+/* ========================================
+
+    CODE YOUR STYLES BELOW!
+
+   ====================================== */
+
+/* FACEBOOK BUTTONS*/
+ .facebook-style-btn {
+    border-radius: 2px;
+    font-size: 0.9rem;
+    padding: 6px, 12px; 
+ }  
+
+.facebook-style-dark{
+   -moz-box-shadow: inset 0 1px 0 0 #4d73bf; /* inset means the shadow is inside the element*/
+   -webkit-box-shadow: inset 0 1px 0 0 #4d73bf;
+   box-shadow: inset 0 1px 0 0 #4d73bf; /* x-offset, y-offset, blur, spread, color*/
+   background: #4267b2;
+   border: solid 1px #4267b2;
+   color: white;
+   text-shadow: 0 1px 0 #3359a5; /* text shadows below give the illusion of the text popping out */
+}
+
+.facebook-style-dark:hover{ /* for hover effects*/
+   background: #2b54a7;
+}
+
+.facebook-style-dark:active{ /* for after click effects*/
+   background: #1d4698;
+   border-color: #1d4698;
+}
+
+
+.facebook-style-light{
+   background: #f6f7f9;
+   border: solid 1px #ced0d4;
+   color: #4d4f56;
+}
+
+.facebook-style-light:hover{
+   background: #e9ebee;
+}
+
+.facebook-style-light:active{
+   background: #d8dade;
+   border-color: #d8dade;
+}
+
+/* 3D BUTTONS */
+.btn-3d-1{
+   position: relative;
+   background: orangered;
+   border: none;
+   color: white;
+   padding: 15px 24px;
+   font-size: 1.4rem;
+   -webkit-box-shadow: -6px 6px 0 hsl(16, 100%, 30%); /* negative x-offset moves the shadow to the left*/
+   box-shadow: -6px 6px 0 hsl(16, 100%, 30%);
+   outline: none;
+}
+
+.btn-3d-1:hover{ /* chage the color of the button */
+   background: hsl(16, 100%, 45%);
+}
+
+.btn-3d-1:active{ /* when the button is pressed, it reduces its top and left size */
+   background: hsl(16, 100%, 40%);
+   top: 3px; /* positive moves 3 px away from the top */
+   left: -3px; /* negative moves 3 pixels more to the left, positive moves 3 pixels away from the left to the right*/
+   box-shadow: -3px 3px 0 hsl(16, 100%, 30%);
+}
+
+.btn-3d-1::before{ /* this added the triangle to the top side of the button to make it 3D */
+   position: absolute; /* position in relation to existing element */
+   display: block; 
+   content: ""; /*used with before or after pseudocodes when creating entirely new component*/
+   height: 0;
+   width:0;
+
+   border: solid 6px transparent; /* entire block makes a triangle*/
+   border-right: solid 6px hsl(16, 100%, 30%);
+   border-left-width: 0;
+   top: 0px;
+   left: -6px;
+}
+
+.btn-3d-1::after{ /* this added the triangle to the bottom side of the button to make it 3D */
+   position: absolute;
+   display: block;
+   content: "";
+   height: 0;
+   width:0;
+
+   border: solid 6px transparent;
+   border-top: solid 6px hsl(16, 100%, 30%);
+   border-bottom-width: 0;
+   right: 0;
+   bottom: -6px;
+}
+
+.btn-3d-1:active::before{ /* this made the top triangle adjust to the size of the active button */
+   border: solid 3px transparent;
+   border-right: solid 3px hsl(16, 100%, 30%);
+   border-left-width: 0;
+   top: 0px;
+   left: -3px;
+}
+
+.btn-3d-1:active::after{ /* this made the bottom triangle adjust to the size of the active button */
+   border: solid 3px transparent; 
+   border-top: solid 3px hsl(16, 100%, 30%);
+   border-bottom-width: 0;
+   right: 0;
+   bottom: -3px;
+}
+
+/* 3D BUTTON 2*/
+.btn-3d-2{
+    position: relative; /* because there will be a lot of movement relative to its original space*/
+    background: #ecd300;
+    background: -webkit-radial-gradient(hsl(54, 100%, 50%), hsl(54, 100%, 40%)); /* chrome browser*/
+    background: -o-radial-gradient(hsl(54, 100%, 50%), hsl(54, 100%, 40%)); /* opera browser*/
+    background: -moz-radial-gradient(hsl(54, 100%, 50%), hsl(54, 100%, 40%)); /* mozilla browser*/
+    background: radial-gradient(hsl(54, 100%, 50%), hsl(54, 100%, 40%));
+    font-size:  1.4rem;
+    text-shadow: 0 -1px 0 #c3af07; /* negative y-offset sets the shadow above the text*/ /* text shadows above give the illusion of the text being stamped in*/
+    color: white;
+    border: solid 1px hsl(54, 100%, 20%);
+    border-radius: 100%;
+    height: 120px;
+    width: 120px;
+    z-index: 4; /* because we want this to be above other elements */
+    outline: none; /* removes the blue outline thingy when you click on it */
+    box-shadow: inset 0 1px 0 hsl(54, 100%, 50%), 
+               0 2px 0 hsl(54, 100%, 20%),
+               0 3px 0 hsl(54, 100%, 18%),
+               0 4px 0 hsl(54, 100%, 16%),
+               0 5px 0 hsl(54, 100%, 14%),
+               0 6px 0 hsl(54, 100%, 12%),
+               0 7px 0 hsl(54, 100%, 10%),
+               0 8px 0 hsl(54, 100%, 8%),
+               0 9px 0 hsl(54, 100%, 6%); /* to create a 3D effect on a circle- because there is none for border-radius- use multiple box shadows- make the color darker and increase the y-offset for 3D effect below */
+}
+
+.btn-3d-2:hover{
+   background: -webkit-radial-gradient(hsl(54, 100%, 45%), hsl(54, 100%, 35%)); 
+   background: -o-radial-gradient(hsl(54, 100%, 45%), hsl(54, 100%, 35%)); 
+   background: -moz-radial-gradient(hsl(54, 100%, 45%), hsl(54, 100%, 35%)); 
+   background: radial-gradient(hsl(54, 100%, 45%), hsl(54, 100%, 35%));
+}
+
+.btn-3d-2:active{
+   background: -webkit-radial-gradient(hsl(54, 100%, 43%), hsl(54, 100%, 33%)); 
+   background: -o-radial-gradient(hsl(54, 100%, 43%), hsl(54, 100%, 33%)); 
+   background: -moz-radial-gradient(hsl(54, 100%, 43%), hsl(54, 100%, 33%)); 
+   background: radial-gradient(hsl(54, 100%, 43%), hsl(54, 100%, 33%));
+   top: 2px; /* moves the entire element down 2px*/
+   box-shadow: inset 0 1px 0 hsl(54, 100%, 50%), /* to prevent moving the whole elemen down, use the box shadow and reduce 2px*/
+               0 2px 0 hsl(54, 100%, 20%),
+               0 3px 0 hsl(54, 100%, 18%),
+               0 4px 0 hsl(54, 100%, 16%),
+               0 5px 0 hsl(54, 100%, 14%),
+               0 6px 0 hsl(54, 100%, 12%),
+               0 7px 0 hsl(54, 100%, 10%);
+}
+
+/* Gradient Bordered Buttons */
+.gradient-button-1{
+   position: relative;
+   z-index: 1;
+   display: inline-block;
+   padding: 20px 40px;
+   font-size: 1.4rem;
+
+   box-sizing: border-box; /* prevents the size of the box from increasing when we increase the size of the border*/
+   background: #e7eef1;
+   border: solid 10px transparent; /* its transparent because we are adding a gradient to the border */
+   border-image: linear-gradient( to top right, orangered, yellow ); /* but the gradient only affects the sides of the border. not the whole border*/
+   border-image-slice: 1; /* to fill out the border with the gradient*/ 
+   color: orangered;
+   transition: all 0.3s ease-in-out; /* for hover effect */
+}
+
+.gradient-button-1:hover{
+   background-image: linear-gradient(to top right, orangered, yellow);
+   color: white;
+   transition: all 0.3s ease-in-out;
+}
+
+.gradient-button-2{
+   position: relative;
+   z-index: 1;
+   display: inline-block;
+   padding: 20px 40px;
+   font-size: 1.4rem;
+
+   box-sizing: border-box; /* prevents the size of the box from increasing when we increase the size of the border*/
+   background: #e7eef1;
+   border: solid 4px transparent; /* its transparent because we are adding a gradient to the border */
+   border-image: linear-gradient( to right, orangered, transparent); /* for a fade out, use transparent*/ /* but the gradient only affects the sides of the border. not the whole border*/
+   border-image-slice: 1; /* to fill out the border with the gradient*/ 
+   color: orangered;
+   transition: all 0.3s ease-in-out; /* for hover effect */
+}
+
+.gradient-button-2:hover{
+   background-image: linear-gradient(to right, orangered, transparent);
+   color: white;
+   transition: all 0.3s ease-in-out;
+   border-right-style: none;
+}
+
+/* Animated Buttons */
+.animated-button-1{
+   position: relative;
+   display: inline-block;
+   padding: 20px 40px;
+   font-size: 1.4rem;
+   background-color: #00b3b4;
+   background-image: url(pattern.png);
+   background-size: 40px 40px;
+   border: solid 1px #555;
+   color: white;
+   transition: all ease 0.3s; 
+}
+
+.animated-button-1:hover{
+   animation: loading-button-animation 2s linear infinite;
+}
+
+@keyframes loading-button-animation { /* keyframes is used for animations*/
+   from{
+      background-position: 0 0;
+   }
+   to{
+      background-position: 40px 0;
+   }
+}
+
+.animated-button-2{
+   position: relative;
+   display: inline-block;
+   padding: 20px 40px;
+   font-size: 1.4rem;
+   background-color: #00b3b4;
+   background-size: 40px 40px;
+   border: solid 1px #555;
+   color: white;
+   transition: all ease 0.3s;
+}
+
+.animated-button-2::after{
+   position: absolute;
+   top: 29%; /* is where the content is going to be displayed which is 29% from the top*/
+   right: 0.6em; /* displayed 0.6em from the right */
+   content: "»";
+   transition: all ease 0.3s;
+   opacity: 0; /*because we dont want it to appear at first*/
+}
+
+.animated-button-2:hover{
+   padding: 20px 60px 20px 20px;
+}
+
+.animated-button-2:hover::after{
+   right: 1.2em;
+   opacity: 1;
+}
+
+/* Toggle Switch UI Buttons */
+.toggle-1{ /* all this is to make checkboxes consistent within different browsers*/
+   font-family: Arial, Helvetica, sans-serif;
+   display: inline-block;
+   vertical-align: top;
+   margin: 0 15px 0 0;
+}
+
+.toggle-1__input{
+   display:none; /*removes the display of the checkbox*/
+}
+
+.toggle-1__button{
+   position: relative;
+   display: inline-block;
+   font-size: 1rem;
+   text-transform: uppercase;
+   background-color: #f2395a;
+   border: solid 1px #f2395a;
+   color: white;
+   width: 80px;
+   height: 30px;
+   transition: all 0.3sec ease;
+   cursor: pointer; /* used with a span class to display glove pointer cursor*/
+}
+
+.toggle-1__button::before{ /* creates an entirely new component of the element*/
+   position: absolute;
+   top: 6px;
+   left: 38px;
+   content: "off";
+   height: 20px;
+   padding: 0 3px;
+   background: white;
+   color: #f2395a;
+   transition: all 0.3s ease;
+}
+
+.toggle-1__input:checked + .toggle-1__button{ /*styles the button when it is checked*/
+   background-color: #00b3b4;
+   border: solid 1px #00b3b4;
+}
+
+.toggle-1__input:checked + .toggle-1__button::before{
+   left: 5px;
+   content: "on";
+   color: #00b3b4;
+}
+
+.toggle-2{
+   font-family: Arial, Helvetica, sans-serif;
+   font-size: 0.8rem;
+   display: inline-block;
+   vertical-align: top;
+   margin: 0 15px 0 0;
+}
+
+.toggle-2__input{
+   display: none;
+}
+
+.toggle-2__button{
+   position: relative;
+   display: inline-block;
+   line-height: 20px;
+   text-transform: uppercase;
+   background: white;
+   color: #aaa;
+   border: solid 1px #ccc;
+   padding: 5px 10px 5px 30px;
+   transition: all 0.3s ease;
+   cursor: pointer;
+}
+
+.toggle-2__button::before{
+   position: absolute;
+   top: 10px;
+   left: 10px;
+   display: inline-block;
+   width: 10px;
+   height: 10px;
+   background: #ccc;
+   content: "";
+   transition: all 0.3s ease;
+   border-radius: 100%;
+}
+
+.toggle-2__input:checked + .toggle-2__button{
+   background: #00b3b4;
+   border-color: #00b3b4;
+   color: white;
+}
+
+.toggle-2__input:checked + .toggle-2__button::before{
+   background-color: white;
+}
