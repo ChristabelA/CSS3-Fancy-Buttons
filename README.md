@@ -1,2 +1,2 @@
 # CSS3-Fancy-Buttons
-I made different types of buttons using CSS3 only. The buttons used transition, animation and gradient. 
+5 different types of buttons were made using CSS3. Some of the buttons are responsive and they use either transitions, gradients or animations. 
